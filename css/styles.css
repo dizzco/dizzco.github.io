@@ -1,20 +1,35 @@
 video-js {
-    width: 100vw;
-    height: 100vh;
+
+    display: block;
+    margin: 0 auto;
+    border: 4px solid #5f2eaf;
+    min-width: 800px;
+    min-height: 600px;
 }
 
 body {
-    background-color: black;
+    background-color: #0c0022;
     color: white;
+    background-image: url("../images/dizzco.jpg");
+    background-size: 100% auto; /* width and height, can be %, px or whatever. */
+    background-repeat: no-repeat; /*Prevent showing multiple background images*/
+    background-attachment: fixed;
 }
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-
 .header {
     text-align: center;
     justify-content: center;
+    padding-top: 20px;
+}
+
+.video-container{
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 }
