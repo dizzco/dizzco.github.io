@@ -1,73 +1,39 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
+
   <meta charset="utf-8">
   <title>DIZZCO.TECH</title>
   <meta name="description" content="Dizz Co">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet" />
-
-  <script src="videojs-hlsjs-plugin.js"></script>
   
+  <!--
+
+  Uses the latest versions of video.js and videojs-http-streaming.
+
+  To use specific versions, please change the URLs to the form:
+
+  <link href="https://unpkg.com/video.js@6.7.1/dist/video-js.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js@6.7.1/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming@0.9.0/dist/videojs-http-streaming.js"></script>
+
+  -->
+
+  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
 </head>
 <body>
 
 
-
-  <div class="video-container">
-  <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    poster="MY_VIDEO_POSTER.jpg"
-    data-setup="{}"
-  >
-    <source src="https://stream.mux.com/sSDtE5ZFJLNQcBRdvppXnesuWvsno3uXULquFQvbKs4.m3u8" type="application/x-mpegURL" />
-    <source src="MY_VIDEO.webm" type="video/webm" />
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
-  </video>
-
+  <video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268">
+    <source src="https://stream.mux.com/SqSugwRa6KT1TaouxrMwfaoTqYRuCDJD5xPXXYkEqzk.m3u8" type="application/x-mpegURL">
+  </video-js>
   
-<script>
-  const playerInitTime = Date.now();
-
-  // EITHER initialize Mux Data monitoring like this
-  videojs('my-player', {
-    plugins: {
-      mux: {
-        debug: false,
-        data: {
-          env_key: '1jkqauboka5r31qo852h9jmfr', // required
-
-          // Metadata
-          player_name: '', // ex: 'My Main Player'
-          player_init_time: playerInitTime // ex: 1451606400000
-
-          // ... and other metadata
-        }
-      }
-    }
-  });
-
-
-  // OR call the mux function on the player instance
-  // var player = videojs('my-player');
-  // player.mux({
-  //   debug: false,
-  //   data: { ... }
-  // });
-</script>  
-
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
   
-  </div>
-
-  <script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
+  <script>
+    var player = videojs('my_video_1');
+  </script>
+  
 </body>
 </html>
