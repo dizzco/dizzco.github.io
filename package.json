@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@videojs/http-streaming": "^2.14.2",
-    "videojs-mux": "^4.6.4"
+    "@videojs/http-streaming": "^2.14.2"
   }
 }

@@ -1,11 +1,6 @@
-video {
+video-js {
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-
 }
 
 body {
@@ -18,17 +13,6 @@ html, body {
     padding: 0;
 }
 
-.video-container {
-    height: 100%; /* Height option*/
-    width: 100%;
-    overflow: hidden;
-
-}
-
-    .video-container > video {
-        min-width: 100%;
-        min-height: 100%;
-    }
 
 .header {
     text-align: center;
