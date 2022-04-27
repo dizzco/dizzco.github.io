@@ -31,7 +31,7 @@
 
 
 <div class="video-container">
-  <video-js id="my_video_1" class="vjs-default-skin vjs-big-play-centered vjs-matrix" controls preload="auto">
+  <video-js id="my_video_1" class="vjs-default-skin vjs-big-play-centered vjs-matrix" controls preload="auto" data-setup='{"poster":"./images/offline.png"}'>
     <source src="https://streamer.h.thelazy.net/hls/kp.m3u8" type="application/x-mpegURL">
   </video-js>
   
@@ -39,7 +39,11 @@
   <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
   
   <script>
-    var player = videojs('my_video_1');
+    var player = videojs('my_video_1', {
+  errorDisplay: false
+ 
+});
+
   </script>
   </div>
 
